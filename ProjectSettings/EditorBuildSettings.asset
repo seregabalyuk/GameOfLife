@@ -8,4 +8,13 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/Menu.unity
+    guid: 3f4a22fe7992a514090f601aaf776450
+  - enabled: 1
+    path: Assets/Scenes/War.unity
+    guid: 3bcb2b6e714056641a40ca02a7008d59
+  - enabled: 1
+    path: Assets/Scenes/Sandbox.unity
+    guid: 58c077fc58938d345adcc1e7420291f2
   m_configObjects: {}

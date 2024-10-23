@@ -205,4 +205,9 @@ public class CellAutomation : MonoBehaviour {
     void Start() {
         rule = new CellRule(nameRules);
     }
+
+    public void SetRule(string name) {
+        nameRules = name;
+        rule = new CellRule(nameRules);
+    }
 }
