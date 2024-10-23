@@ -18,6 +18,8 @@ public class GameController : MonoBehaviour {
     [SerializeField]
     int factorCost = 3;
     [SerializeField]
+    int startMoney = 100;
+    [SerializeField]
     TextMeshProUGUI[] moneyText;
     [SerializeField]
     float radiusBase;
@@ -27,11 +29,13 @@ public class GameController : MonoBehaviour {
     float speedMax = 1000;
     [SerializeField]
     TextMeshProUGUI textWin;
+    [SerializeField]
+    RunPause runPause;
     
     
     
     float timeForStep = 1;
-    bool isPause = false;
+    bool isPause = true;
 
     int []moneyPlayers;
     float time = 0;
@@ -51,6 +55,9 @@ public class GameController : MonoBehaviour {
             }
         }
         moneyPlayers = new int[flags.Length];
+        for (int i = 0; i < flags.Length; ++ i) {
+            moneyPlayers[i] = startMoney;
+        }
     }
     void UpdateCells() {
         while (time > timeForStep) {
@@ -67,6 +74,7 @@ public class GameController : MonoBehaviour {
     void UpdatePause() {
         if (Input.GetKeyDown(KeyCode.Space)) {
             isPause = !isPause;
+            runPause.ChangeState(isPause);
         }
     }
 

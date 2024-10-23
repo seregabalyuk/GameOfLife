@@ -13,9 +13,11 @@ public class Sandbox : MonoBehaviour {
     float speedMin = 1;
     [SerializeField]
     float speedMax = 1000;
+    [SerializeField]
+    RunPause runPause;
     
     float timeForStep = 1;
-    bool isPause = false;
+    bool isPause = true;
 
     int []moneyPlayers;
     float time = 0;
@@ -35,6 +37,7 @@ public class Sandbox : MonoBehaviour {
     void UpdatePause() {
         if (Input.GetKeyDown(KeyCode.Space)) {
             isPause = !isPause;
+            runPause.ChangeState(isPause);
         }
     }
 
